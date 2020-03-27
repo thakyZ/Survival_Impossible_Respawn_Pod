@@ -1,32 +1,30 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <RespawnShips>
-
     <Ship>
       <Id>
         <TypeId>RespawnShipDefinition</TypeId>
-        <SubtypeId>RespawnPlanetPod</SubtypeId>
+        <SubtypeId>RespawnDamagedPod</SubtypeId>
       </Id>
-      <DisplayName>DisplayName_PlanetaryLander</DisplayName>
+      <DisplayName>Destoryed Spawn Pod</DisplayName>
       <Icon>Textures\GUI\Icons\RespawnShips\RespawnPlanetPod.png</Icon>
-      <CooldownSeconds>900</CooldownSeconds>
-      <Prefab>Damaged Drop Pod</Prefab>
-        
-      <MinimalAirDensity>0.8</MinimalAirDensity>
+      <CooldownSeconds>0</CooldownSeconds>
+      <Prefab>RespawnDamagedPod</Prefab>
+
       <PlanetDeployAltitude>2000</PlanetDeployAltitude>
       <UseForPlanetsWithAtmosphere>true</UseForPlanetsWithAtmosphere>
 
-      <PlanetTypes>
-        <PlanetType>Omicron</PlanetType>
-      </PlanetTypes>
+      <!-- <PlanetTypes> -->
+      <!--   <PlanetType>Triton</PlanetType> -->
+      <!-- </PlanetTypes> -->
+      <!-- <UseForSpace>true</UseForSpace> -->
 
-      <InitialLinearVelocity x="0" y="-95" z="0" />
-      <InitialAngularVelocity x="0" y="0.5" z="0" />
-      <HelpTextLocalizationId>Spawns a damaged drop pod.</HelpTextLocalizationId>
+      <!-- <InitialLinearVelocity x="0" y="-95" z="0" /> -->
+      <!-- <InitialAngularVelocity x="0" y="0.5" z="0" /> -->
+      <HelpTextLocalizationId>RespawnScreeenHelpTextSpawn</HelpTextLocalizationId>
     </Ship>
     
     <!-- EEM Ships - Disabled -->
-    
     <Ship Enabled="false">
       <Id>
         <TypeId>RespawnShipDefinition</TypeId>
@@ -82,6 +80,24 @@
     </Ship>
     
     <!-- Vanilla Ships - Disabled -->
+    <Ship Enabled="false">
+      <Id>
+        <TypeId>RespawnShipDefinition</TypeId>
+        <SubtypeId>RespawnPlanetPod</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_PlanetaryLander</DisplayName>
+      <Icon>Textures\GUI\Icons\RespawnShips\RespawnPlanetPod.png</Icon>
+      <CooldownSeconds>900</CooldownSeconds>
+      <Prefab>RespawnPlanetPod</Prefab>
+      
+      <MinimalAirDensity>0.8</MinimalAirDensity>
+      <PlanetDeployAltitude>2000</PlanetDeployAltitude>
+      <UseForPlanetsWithAtmosphere>true</UseForPlanetsWithAtmosphere>
+
+      <InitialLinearVelocity x="0" y="-95" z="0" />
+      <InitialAngularVelocity x="0" y="0.5" z="0" />
+      <HelpTextLocalizationId>RespawnScreeenHelpTextSpawn</HelpTextLocalizationId>
+    </Ship>
 
     <Ship Enabled="false">
       <Id>
@@ -90,8 +106,9 @@
       </Id>
       <DisplayName>DisplayName_PlanetaryLander</DisplayName>
       <Icon>Textures\GUI\Icons\RespawnShips\RespawnMoonPod.png</Icon>
-      <CooldownSeconds>0</CooldownSeconds>
+      <CooldownSeconds>900</CooldownSeconds>
       <Prefab>RespawnMoonPod</Prefab>
+      
       <PlanetDeployAltitude>8</PlanetDeployAltitude>
       <UseForPlanetsWithoutAtmosphere>true</UseForPlanetsWithoutAtmosphere>
       <HelpTextLocalizationId>RespawnScreeenHelpTextSpawn</HelpTextLocalizationId>
@@ -106,9 +123,9 @@
       <Icon>Textures\GUI\Icons\RespawnShips\RespawnSpacePod.png</Icon>
       <CooldownSeconds>900</CooldownSeconds>
       <Prefab>RespawnSpacePod</Prefab>
+      
       <UseForSpace>true</UseForSpace>
       <HelpTextLocalizationId>RespawnScreeenHelpTextSpaceSpawn</HelpTextLocalizationId>
     </Ship>
-
   </RespawnShips>                
 </Definitions>
